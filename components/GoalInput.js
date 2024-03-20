@@ -9,6 +9,10 @@ function GoalInput(props) {
   }
 
   function addGoalHandler() {
+    if (!enteredText.trim()) {
+      alert("Course goal is empty!");
+      return;
+    }
     props.onAddGoal(enteredText);
     setEnteredText("");
   }
